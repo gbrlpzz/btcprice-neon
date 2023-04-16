@@ -65,9 +65,8 @@
         const [priceRes, historyRes] = await Promise.all([
           axios.get("https://api.coindesk.com/v1/bpi/currentprice/BTC.json"),
           axios.get(
-          "https://api.coindesk.com/v1/bpi/historical/close.json?currency=USD&start=-365days&end=today"
+            "https://api.coindesk.com/v1/bpi/historical/close.json?currency=USD&start=-365days&end=today"
           ),
-
         ]);
 
         dispatch(
